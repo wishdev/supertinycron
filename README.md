@@ -72,7 +72,7 @@ The character `L` stands for "last". In the 'Day of week' field, `5L` denotes th
 
 - Using `L` alone in the 'Day of week' field is equivalent to `0` or `SAT`. Hence, expressions `* * * * * L *` and `* * * * * 0 *` are the same.
   
-- When followed by another value in the 'Day of week' field, like `6L`, it signifies the last Friday of the month.
+- When followed by another value in the 'Day of week' field, like `5L`, it signifies the last Friday of the month.
   
 - If followed by a negative number in the 'Day of month' field, such as `L-3`, it indicates the third-to-last day of the month.
 
