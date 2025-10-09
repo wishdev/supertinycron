@@ -70,7 +70,7 @@ Commas separate items in a list. For instance, `MON,WED,FRI` in the 'Day of week
 #### `L`
 The character `L` stands for "last". In the 'Day of week' field, `5L` denotes the last Friday of a given month. In the 'Day of month' field, it represents the last day of the month.
 
-- Using `L` alone in the 'Day of week' field is equivalent to `0` or `SAT`. Hence, expressions `* * * * * L *` and `* * * * * 0 *` are the same.
+- Using `L` alone in the 'Day of week' field is equivalent to `0` or `SUN`. Hence, expressions `* * * * * L *` and `* * * * * 0 *` are the same.
   
 - When followed by another value in the 'Day of week' field, like `5L`, it signifies the last Friday of the month.
   
