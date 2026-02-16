@@ -498,11 +498,11 @@ static int find_nextprev(uint8_t* bits, int max, int value, int value_offset, st
     next_value -= value_offset;
     /* roll under if needed */
     if (next_value < 0) {
-        if (offset > 0) reset_max(calendar, field); else reset_min(calendar, field);
         add_to_field(calendar, nextField, offset); MKTIME(calendar);
         next_value = offset > 0 ? next_set_bit(bits, max, 0) : prev_set_bit(bits, max - 1, value);
     }
     if (next_value < 0 || next_value != value) {
+        if (offset > 0) reset_min(calendar, CRON_CF_SECOND); else reset_max(calendar, CRON_CF_SECOND);
         if (offset > 0) reset_all_min(calendar, lower_orders) else reset_all_max(calendar, lower_orders);
         set_field(calendar, field, next_value < 0 ? 0 : next_value); MKTIME(calendar);
     }
